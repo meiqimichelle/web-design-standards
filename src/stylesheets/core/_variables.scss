@@ -8,10 +8,10 @@
 // own partials, then @import '{path/to/uswds/}core/variables'.
 
 // Typography
-// Removing the !default from $em-base so we are not inheriting that 
+// Removing the !default from $em-base so we are not inheriting that
 // value from Bourbon.
 $em-base:             10px;
-$base-font-size:      rem(17px) !default;
+$base-font-size:      rem(16px) !default;
 $small-font-size:     rem(14px) !default;
 $lead-font-size:      rem(20px) !default;
 $title-font-size:     rem(52px) !default;
@@ -21,12 +21,12 @@ $h3-font-size:        rem(20px) !default;
 $h4-font-size:        rem(17px) !default;
 $h5-font-size:        rem(15px) !default;
 $h6-font-size:        rem(13px) !default;
-$base-line-height:    1.5 !default;
+$base-line-height:    1.618 !default;
 $heading-line-height: 1.3 !default;
 $lead-line-height:    1.7 !default;
 
-$font-sans:           'Source Sans Pro', $helvetica !default;
-$font-serif:          'Merriweather', $georgia !default;
+$font-sans:           '18Franklin', $helvetica !default;
+$font-serif:          $georgia !default;
 
 $font-normal:         400 !default;
 $font-bold:           700 !default;

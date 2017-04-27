@@ -51,7 +51,7 @@
   font-weight: $font-normal;
 
   @include media($small-screen) {
-    @include padding(0 null);
+    @include padding(0.8rem null);
   }
 
   p {
@@ -61,7 +61,7 @@
     vertical-align: middle;
 
     @include media($small-screen) {
-      @include margin(2px null);
+      @include margin(1px null);
       display: inline-block;
     }
   }
