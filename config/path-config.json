@@ -2,9 +2,18 @@
   "src": "./src",
   "dest": "./dist",
 
-  "html": false,
+  "fonts": {
+    "src": "fonts",
+    "dest": "fonts"
+  },
 
-  "static": false,
+  "html": false,
+  "icons": false,
+
+  "images": {
+    "src": "img",
+    "dest": "img"
+  },
 
   "javascripts": {
     "src": "js",
@@ -16,15 +25,8 @@
     "dest": "css"
   },
 
-  "images": {
-    "src": "img",
-    "dest": "img"
-  },
-
-  "fonts": {
-    "src": "fonts",
-    "dest": "fonts"
-  },
-
-  "icons": false
+  "static": {
+    "src": "../*.md",
+    "dest": "."
+  }
 }
