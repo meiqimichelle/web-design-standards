@@ -4,6 +4,13 @@
   "description": "Open source UI components and visual style guide for U.S. government websites",
   "main": "dist/js/uswds.min.js",
   "jsnext:main": "src/js/start.js",
+  "browserslist": [
+    "> 1%",
+    "Last 2 versions",
+    "IE 11",
+    "IE 10",
+    "IE 9"
+  ],
   "scripts": {
     "build": "gulp build",
     "build:css": "gulp sass",
