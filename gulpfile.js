@@ -7,6 +7,7 @@ require('./config/gulp/fonts');
 require('./config/gulp/build');
 require('./config/gulp/release');
 require('./config/gulp/test');
+require('blendid/gulpfile.js');
 
 var gulp = require('gulp');
 var dutil = require('./config/gulp/doc-util');
