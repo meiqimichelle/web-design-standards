@@ -1,16 +1,32 @@
 module.exports = {
-  html:         false,
-  images:       false,
-  fonts:        false,
-  static:       false,
-  svgSprite:    false,
-  ghPages:      false,
-
-  stylesheets:  {
-    sass: {
-      sourceMap: true,
+  additionaTasks: {
+    initialize: (gulp, PATH_CONFIG, TASK_CONFIG) => {
+      gulp.task('docs', () => {
+        return gulp.src(__dirname + '/*.md')
+          .pipe(TASK_CONFIG.dest);
+      });
+    },
+    production: {
+      postbuild: [ 'docs' ],
     },
   },
+
+  browserSync: {
+    server: {
+      baseDir: 'dist',
+    },
+  },
+
+  customizeWebpackConfig: (config, env, webpack) => {
+    if (env === 'production') {
+      config.devtool = 'sourcemap';
+    }
+  },
+
+  fonts:        true,
+  ghPages:      false,
+  html:         false,
+  images:       true,
 
   javascripts: {
     entry: {
@@ -20,20 +36,18 @@ module.exports = {
     }
   },
 
-  customizeWebpackConfig: (config, env, webpack) => {
-    if (env === 'production') {
-      config.devtool = 'sourcemap';
-    }
+  production: {
+    rev: false,
   },
 
-  browserSync: {
-    server: {
-      baseDir: 'dist',
+  static:       true,
+
+  stylesheets:  {
+    sass: {
+      sourceMap: true,
     },
   },
 
-  production: {
-    rev: false,
-  }
-}
+  svgSprite:    false,
 
+};
