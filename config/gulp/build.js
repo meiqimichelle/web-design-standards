@@ -24,9 +24,7 @@ gulp.task('docs', function (done) {
   dutil.logMessage('docs', 'Copying documentation dist dir');
 
   var stream = gulp.src([
-    'README.md',
-    'LICENSE.md',
-    'CONTRIBUTING.md'
+      '*.md',
     ])
     .pipe(gulp.dest('dist'));
 
